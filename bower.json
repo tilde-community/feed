@@ -1,0 +1,19 @@
+{
+  "name": "feed",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Arnelle Balane <arnellebalane@gmail.com> (arnellebalane.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tilde-community/feed",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
