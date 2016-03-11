@@ -1,7 +1,7 @@
 require(['jquery', 'components/feeds'], ($, _feeds) => {
     let feeds = _feeds($('.feeds-list'));
 
-    const ENDPOINT = 'http://localhost:8000/activities';
+    const ENDPOINT = 'http://localhost:8000/api/activities';
     let lastFeed = 0;
 
 
@@ -9,9 +9,8 @@ require(['jquery', 'components/feeds'], ($, _feeds) => {
         $.ajax({
             url: ENDPOINT,
             type: 'GET',
-            data: { last: lastFeed },
+            data: { pk__gt: lastFeed },
             success: (data) => {
-                data = JSON.parse(data);
                 lastFeed = data[data.length - 1].pk;
                 callback(data);
             }
@@ -23,5 +22,5 @@ require(['jquery', 'components/feeds'], ($, _feeds) => {
         fetchFeeds((data) => {
             data.forEach(feeds.add);
         });
-    }, 100);
+    }, 500);
 });
