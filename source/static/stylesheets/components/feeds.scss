@@ -2,7 +2,23 @@
 
 
 .feeds-list {
+    align-items: flex-start;
+    height: 100vh;
     padding: 1rem;
+    margin: 0 auto;
+    overflow: auto;
+
+    @media all and (min-width: $grid-bp-sm) {
+        width: calc(100% / 12 * 10);
+    }
+
+    @media all and (min-width: $grid-bp-md) {
+        width: calc(100% / 12 * 8);
+    }
+
+    @media all and (min-width: $grid-bp-lg) {
+        width: calc(100% / 12 * 6);
+    }
 }
 
 
