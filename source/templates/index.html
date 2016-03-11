@@ -8,35 +8,16 @@
     </head>
 
     <body>
-        <section class="grid center feeds-list">
-            <article class="column xs-twelve sm-ten md-eight lg-six feed">
-                <h1 class="title">Arnelle Balane entered the world!</h1>
-                <img src="/static/images/world-enter.svg" alt="world-enter" class="icon">
-            </article>
-            <article class="column xs-twelve sm-ten md-eight lg-six feed">
-                <h1 class="title">Arnelle Balane entered the world!</h1>
-                <img src="/static/images/monster-found.svg" alt="world-enter" class="icon">
-            </article>
-            <article class="column xs-twelve sm-ten md-eight lg-six feed">
-                <h1 class="title">Arnelle Balane entered the world!</h1>
-                <img src="/static/images/player-fainted.svg" alt="world-enter" class="icon">
-            </article>
-            <article class="column xs-twelve sm-ten md-eight lg-six feed">
-                <h1 class="title">Arnelle Balane entered the world!</h1>
-                <img src="/static/images/player-level-up.svg" alt="world-enter" class="icon">
-            </article>
-            <article class="column xs-twelve sm-ten md-eight lg-six feed">
-                <h1 class="title">Arnelle Balane entered the world!</h1>
-                <img src="/static/images/monster-success.svg" alt="world-enter" class="icon">
-            </article>
-        </section>
+        <section class="grid center feeds-list"></section>
 
+        {% raw %}
         <template id="feed">
             <article class="column xs-twelve sm-ten md-eight lg-six feed">
                 <h1 class="title">{{ body }}</h1>
                 <img src="/static/images/{{ kind }}.svg" alt="{{ kind }}" class="icon">
             </article>
         </template>
+        {% endraw %}
 
         <script src="/static/vendor/requirejs/require.js"></script>
         <script src="/static/javascripts/base/require-config.js"></script>
