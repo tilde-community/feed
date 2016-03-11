@@ -25,5 +25,9 @@
     "gulp-babel": "^6.1.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "nunjucks": "^2.4.0"
   }
 }
